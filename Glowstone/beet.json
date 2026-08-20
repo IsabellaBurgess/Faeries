@@ -1,0 +1,19 @@
+{
+    "name": "Uncorrupt",
+    "description": "A datapack that uncorrupts an area around glowstone",
+    "minecraft": "1.20",
+    "require": [
+        "bolt",
+        "bolt_expressions"
+    ],
+    "data_pack": {
+        "load": [
+            "src"
+        ]
+    },
+    "pipeline": [
+        "mecha",
+        "plugins.tagged_functions"
+    ],
+    "output": "build"
+}

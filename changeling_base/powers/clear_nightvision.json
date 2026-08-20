@@ -1,0 +1,14 @@
+{
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.ternary_active"
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "effect clear @s minecraft:night_vision"
+    },
+    "condition": {
+        "type": "origins:sneaking"
+    },
+    "hidden": true
+}

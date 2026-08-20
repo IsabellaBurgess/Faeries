@@ -1,0 +1,21 @@
+{
+    "name": "§a§l§nIncrease Size",
+    "description": "You will sometimes use your glamor unconciously to make yourself seem bigger than you really are.",
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.quinary_active"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "scale add pehkui:base 0.05"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "scale subtract pehkui:motion 0.0167"
+            }
+        ]
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "replace": true,
+    "default_origin": "seelie:human",
+    "origins": [
+        "seelie:seelie",
+        "unseelie:unseelie",
+        "c_fall:c_fall",
+        "c_spring:c_spring",
+        "seelie:human",
+        "unseelie:wizard",
+        "corruption:stage_1",
+        "corruption:stage_2",
+        "corruption:stage_3",
+        "corruption:unseelie_stage_1",
+        "corruption:rin",
+        "custom_skins:ent",
+        "custom_skins:sierra"
+    ]
+}

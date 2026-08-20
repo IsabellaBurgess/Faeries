@@ -1,0 +1,11 @@
+{
+    "name": "§1§l§nExtra Health",
+    "description": "The sculk has made you stronger, more durable. You feel healthier than before",
+    "type": "origins:attribute",
+    "modifier": {
+        "name": "Max health increase",
+        "attribute": "minecraft:generic.max_health",
+        "value": 10,
+        "operation": "addition"
+    }
+}

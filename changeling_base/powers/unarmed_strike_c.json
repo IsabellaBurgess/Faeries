@@ -1,0 +1,18 @@
+{
+    "name": "§a§l§nUnarmed Strike",
+    "description": "When you hit someone with an empty hand, there is a 20% chance of inflicting them with weakness. The effect lasts 5 seconds.",
+    "type": "origins:target_action_on_hit",
+    "entity_action": {
+        "type": "origins:chance",
+        "action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:weakness",
+                "amplifier": 1,
+                "durration": 100,
+                "is_ambient": true
+            }
+        },
+        "chance": 0.20
+    }
+}

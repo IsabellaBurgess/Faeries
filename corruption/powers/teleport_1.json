@@ -1,0 +1,40 @@
+{
+    "name": "§1§l§nRandom Teleportation",
+    "description": "The forest has taught you how to teleport without using the fruit at the cost of experience.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Trigger by pressing %s. Uses experience."
+        }
+    ],
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.ternary_active"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:portal ~ ~ ~ 0.5 0.5 0.7 5 100 force @a"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "spreadplayers ~ ~ 1 15 under 127 false @s"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle minecraft:reverse_portal ~ ~ ~ 0.3 0.3 0.5 5 100 force @a"
+            },
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.enderman.teleport"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "xp add @s -1 levels"
+            }
+        ]
+    },
+    "cooldown": 60
+}

@@ -1,0 +1,21 @@
+{
+    "type": "origins:multiple",
+    "braided": {
+        "hidden": true,
+        "type": "sync:entity_texture_overlay",
+        "wide_texture_location": "players:textures/skins/sierra_braided.png",
+        "slim_texture_location": "players:textures/skins/sierra_braided.png",
+        "render_as_overlay": false,
+        "hide_cape": true,
+        "show_first_person": true
+    },
+    "magical_girl": {
+        "hidden": true,
+        "type": "sync:entity_texture_overlay",
+        "wide_texture_location": "players:textures/skins/sierra_magical_girl.png",
+        "slim_texture_location": "players:textures/skins/sierra_magical_girl.png",
+        "render_as_overlay": false,
+        "hide_cape": true,
+        "show_first_person": true
+    }
+}

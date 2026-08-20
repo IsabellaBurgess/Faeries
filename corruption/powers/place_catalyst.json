@@ -1,0 +1,126 @@
+{
+    "name": "§1§l§nSpread the Sculk",
+    "description": "You have learned how to spread the sculk on your own. Perhaps you can fight back against those trying to get rid of you.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Shift + right clicking a block will replace it with a sculk catalyst. Costs 4 levels of experience"
+        },
+        {
+            "sprite": "minecraft:textures/item/glow_berries.png",
+            "text": "Destroying a block of glowstone costs 8 levels of experience."
+        }
+    ],
+    "type": "origins:multiple",
+    "replace_block": {
+        "type": "origins:action_on_block_use",
+        "block_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:set_block",
+                    "block": "minecraft:sculk_catalyst"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle sculk_charge_pop ~ ~0.5 ~ 0.5 0 0.5 0 10"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.sculk_catalyst.place"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "xp add @s -2 levels"
+                }
+            ]
+        },
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:glowstone",
+            "inverted": true
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 5
+                }
+            ]
+        }
+    },
+    "swap_glowstone": {
+        "type": "origins:action_on_block_use",
+        "block_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:set_block",
+                    "block": "minecraft:sculk_catalyst"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "kill @e[type=minecraft:marker, distance=..1]"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle happy_villager ~ ~ ~ 0.5 0 0.5 0 26"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:block.glass.break"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "xp add @s -4 levels"
+                }
+            ]
+        },
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:glowstone"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:empty"
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 8
+                }
+            ]
+        }
+    }
+}

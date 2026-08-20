@@ -1,0 +1,13 @@
+{
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:glow_berries"
+        }
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "/title @s actionbar [{\"text\":\"Your mind clears slightly\",\"color\":\"#f8c881\",\"shadow_color\":-1359319}]"
+    }
+}

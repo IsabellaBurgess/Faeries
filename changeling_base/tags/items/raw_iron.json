@@ -1,0 +1,10 @@
+{
+    "values": [
+        "minecraft:raw_iron",
+        "minecraft:iron_ingot",
+        "#minecraft:redstone_ores",
+        "minecraft:redstone_torch",
+        "minecraft:redstone",
+        "minecraft:redstone_block"
+    ]
+}

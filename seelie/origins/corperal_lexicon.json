@@ -1,0 +1,25 @@
+{
+    "powers": [
+        "seelie:unarmed_strike_s",
+        "seelie:toggle_phasing",
+        "base_fae:night_vision",
+        "seelie:bonemeal",
+        "seelie:vine_whip",
+        "seelie:root_entanglment",
+        "base_fae:drop_iron",
+        "base_fae:mobs_ignore",
+        "seelie:in_unseelie_territory",
+        "base_fae:drop_iron",
+        "base_fae:salt_repel",
+        "base_fae:rowan_nausea",
+        "base_fae:iron_damage",
+        "base_fae:no_boat",
+        "base_fae:swim_slow",
+        "seelie:vine_silktouch"
+    ],
+    "icon": "minecraft:red_tulip",
+    "order": 2,
+    "impact": 3,
+    "name": "Corperal Lexicon",
+    "description": "A member of Squadron A, sent here to guard the border after your Prince was killed. You suspect the Unseelie may have something to do with it."
+}

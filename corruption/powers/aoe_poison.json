@@ -1,0 +1,31 @@
+{
+    "name": "§1§l§nPoison",
+    "description": "You are able to create a cloud of magic that will blind and poison your enemies",
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.quinary_active"
+    },
+    "entity_action": {
+        "type": "origins:spawn_effect_cloud",
+        "radius": 5.0,
+        "wait_time": 20,
+        "effects": [
+            {
+                "effect": "minecraft:blindness",
+                "amplifier": 3,
+                "duration": 150
+            },
+            {
+                "effect": "minecraft:poison",
+                "amplifier": 1,
+                "duration": 100
+            }
+        ]
+    },
+    "cooldown": 500,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "resource_bars:effects/textures/gui/bar1.png",
+        "bar_index": 2
+    }
+}

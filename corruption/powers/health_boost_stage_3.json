@@ -1,0 +1,30 @@
+{
+    "name": "§1§l§nIncreased Strength",
+    "description": "The sculk has made you stronger, more durable. You feel healthier than before",
+    "type": "origins:multiple",
+    "health": {
+        "type": "origins:attribute",
+        "modifier": {
+            "name": "Max health increase",
+            "attribute": "minecraft:generic.max_health",
+            "value": 20,
+            "operation": "addition"
+        }
+    },
+    "strength": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "effect give @s minecraft:strength infinite 1 true"
+        }
+    },
+    "defense": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "effect give @s minecraft:resistance infinite 2 true"
+        }
+    }
+}

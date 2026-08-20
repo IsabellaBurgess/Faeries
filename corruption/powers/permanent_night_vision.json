@@ -1,0 +1,16 @@
+{
+    "name": "§1§l§nNight Vision",
+    "description": "Your night vision is no longer toggleable.",
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:night_vision",
+            "duration": -1,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false
+        }
+    }
+}

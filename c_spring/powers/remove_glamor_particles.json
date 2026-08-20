@@ -1,0 +1,35 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "condition": {
+        "type": "origins:glowing"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "power grant @s c_spring:disguise_particles"
+            },
+            {
+                "type": "sync:remove_disguise"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power grant @s c_spring:reveal_glamor"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power remove @s c_spring:clear_disguise"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power grant @s c_spring:broken_clear_disguise"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power remove @s c_spring:remove_glamor_particles"
+            }
+        ]
+    }
+}

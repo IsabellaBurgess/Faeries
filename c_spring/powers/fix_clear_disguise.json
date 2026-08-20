@@ -1,0 +1,26 @@
+{
+    "hidden": true,
+    "type": "origins:active_self",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Return to your original form with %s"
+        }
+    ],
+    "key": {
+        "key": "key.origins.quinary_active"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "power remove @s c_spring:broken_clear_disguise"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power grant @s c_spring:clear_disguise"
+            }
+        ]
+    }
+}

@@ -1,0 +1,141 @@
+{
+    "name": "§1§l§nSculk Tendril§r",
+    "description": "You are able to summon a tendril of sculk that will pull people towards you, immobilizing and blinding them temporarily.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Hit %s when facing an entity to pull them towards you and immobilize them."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/diamond_sword.png",
+            "text": "Combat ability."
+        }
+    ],
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.warden.tendril_clicks",
+                "volume": 1.5,
+                "pitch": 0.6
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s add catalyst_self"
+            },
+            {
+                "type": "origins:raycast",
+                "distance": 32,
+                "block": true,
+                "entity": false,
+                "shape_type": "visual",
+                "fluid_handling": "none",
+                "command_along_ray": "function corruption:tendril_ray",
+                "command_step": 1
+            },
+            {
+                "type": "origins:area_of_effect",
+                "radius": 20,
+                "shape": "sphere",
+                "bientity_condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:nbt",
+                                "nbt": "{Tags:[\"catalyst_grabbed\"]}"
+                            }
+                        ]
+                    }
+                },
+                "bientity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:add_velocity",
+                            "x": 0.0,
+                            "y": 0.4,
+                            "z": -2,
+                            "relative_to": "position",
+                            "mode": "set"
+                        },
+                        {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:and",
+                                "actions": [
+                                    {
+                                        "type": "origins:play_sound",
+                                        "sound": "entity.warden.emerge",
+                                        "volume": 0.3
+                                    },
+                                    {
+                                        "type": "origins:play_sound",
+                                        "sound": "block.grass.break",
+                                        "volume": 0.5
+                                    },
+                                    {
+                                        "type": "origins:execute_command",
+                                        "command": "power grant @s corruption:entangled"
+                                    },
+                                    {
+                                        "type": "origins:apply_effect",
+                                        "effects": [
+                                            {
+                                                "effect": "minecraft:slowness",
+                                                "duration": 100,
+                                                "amplifier": 1,
+                                                "show_particles": false,
+                                                "show_icon": true
+                                            },
+                                            {
+                                                "effect": "minecraft:darkness",
+                                                "duration": 100,
+                                                "amplifier": 0,
+                                                "show_particles": false,
+                                                "show_icon": true
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "origins:target_action",
+                            "action": {
+                                "type": "origins:spawn_particles",
+                                "particle": "minecraft:sculk_soul",
+                                "count": 14
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "function corruption:tendril_cost"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "tag @e remove catalyst_grabbed"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "tag @s remove catalyst_self"
+            }
+        ]
+    },
+    "cooldown": 120,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "horde:textures/gui/resource_bars.png",
+        "bar_index": 2
+    },
+    "key": {
+        "key": "key.origins.secondary_active"
+    }
+}

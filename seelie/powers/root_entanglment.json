@@ -1,0 +1,125 @@
+{
+    "name": "§a§l§nRoot Entanglement",
+    "description": "Every 30 seconds, you can drag your opponent into the ground with roots, immobilizing them temporarily. Only works if the target is standing on a variant of dirt, and the target is instantly freed if on fire.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Hit %s when facing an entity to pull them into the ground and immobilize them."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/diamond_sword.png",
+            "text": "Combat ability."
+        }
+    ],
+    "type": "origins:active_self",
+    "cooldown": 600,
+    "key": {
+        "key": "key.origins.secondary_active"
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+        "bar_index": 8
+    },
+    "condition": {
+        "type": "origins:raycast",
+        "distance": 64,
+        "block": false,
+        "match_bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:living"
+            }
+        }
+    },
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 64,
+        "block": false,
+        "command_along_ray": "particle minecraft:block minecraft:mangrove_roots ~ ~ ~ 0 0 0 0.0 10",
+        "bientity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:on_block",
+                                "block_condition": {
+                                    "type": "origins:or",
+                                    "conditions": [
+                                        {
+                                            "type": "origins:in_tag",
+                                            "tag": "minecraft:dirt"
+                                        },
+                                        {
+                                            "type": "origins:block",
+                                            "block": "minecraft:dirt_path"
+                                        },
+                                        {
+                                            "type": "origins:block",
+                                            "block": "minecraft:farmland"
+                                        },
+                                        {
+                                            "type": "origins:block",
+                                            "block": "minecraft:mud"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "origins:living"
+                            },
+                            {
+                                "inverted": true,
+                                "type": "origins:on_fire"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:actor_action",
+                    "action": {
+                        "type": "origins:play_sound",
+                        "sound": "entity.warden.dig",
+                        "volume": 0.5
+                    }
+                },
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "entity.warden.emerge",
+                                "volume": 0.3
+                            },
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "block.grass.break",
+                                "volume": 0.5
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "tp @s ~ ~-1 ~"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "power grant @s seelie:entangled"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

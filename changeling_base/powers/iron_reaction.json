@@ -1,0 +1,112 @@
+{
+    "hidden": false,
+    "name": "§c§l§nIron Allergy",
+    "description": "Though it does not effect you as strongly as it would a full fae, you are unable to use iron tools or armor without consequence.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 10,
+        "tick_rate": 1,
+        "effect": {
+            "effect": "minecraft:mining_fatigue",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false,
+            "amplifier": 1
+        },
+        "condition": {
+            "type": "origins:inventory",
+            "slots": [
+                "weapon.mainhand",
+                "weapon.offhand"
+            ],
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "changeling_base:iron_tools"
+                }
+            }
+        }
+    },
+    "key1": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 10,
+        "tick_rate": 1,
+        "effect": {
+            "effect": "minecraft:slowness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false,
+            "amplifier": 1
+        },
+        "condition": {
+            "type": "origins:inventory",
+            "slots": [
+                "armor.chest",
+                "armor.feet",
+                "armor.head",
+                "armor.legs"
+            ],
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "changeling_base:iron_armor"
+                }
+            }
+        }
+    },
+    "key2": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 10,
+        "tick_rate": 1,
+        "effect": {
+            "effect": "minecraft:weakness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false,
+            "amplifier": 0
+        },
+        "condition": {
+            "type": "origins:inventory",
+            "slots": [
+                "weapon.mainhand",
+                "weapon.offhand"
+            ],
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "changeling_base:iron_weapons"
+                }
+            }
+        }
+    },
+    "key3": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 10,
+        "tick_rate": 1,
+        "effect": {
+            "effect": "minecraft:slowness",
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": false,
+            "amplifier": 0
+        },
+        "condition": {
+            "type": "origins:inventory",
+            "item_condition": {
+                "type": "origins:ingredient",
+                "ingredient": {
+                    "tag": "changeling_base:raw_iron"
+                }
+            }
+        }
+    }
+}

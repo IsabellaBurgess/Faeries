@@ -1,0 +1,9 @@
+{
+    "hidden": true,
+    "type": "sync:entity_texture_overlay",
+    "wide_texture_location": "players:textures/skins/val_stage_3.png",
+    "slim_texture_location": "players:textures/skins/val_stage_3.png",
+    "render_as_overlay": false,
+    "hide_cape": true,
+    "show_first_person": true
+}

@@ -1,0 +1,50 @@
+{
+    "name": "§a§l§nNight Vision",
+    "description": "You are able to see in the dark, but not for very long. Every 10 minutes, you are able to give yourself night vision that lasts 5 minutes",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 6000,
+        "min_action": {
+            "type": "origins:execute_command",
+            "command": "effect give @s minecraft:night_vision infinite 1 true"
+        },
+        "max_action": {
+            "type": "origins:execute_command",
+            "command": "effect clear @s minecraft:night_vision"
+        }
+    },
+    "activate": {
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "*:*_resource",
+                    "change": 0,
+                    "operation": "set"
+                }
+            ]
+        },
+        "key": {
+            "key": "key.origins.ternary_active"
+        },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+            "bar_index": 0
+        },
+        "cooldown": 12000
+    },
+    "timer": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_resource",
+            "change": 1
+        }
+    }
+}

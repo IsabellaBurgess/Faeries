@@ -1,0 +1,10 @@
+{
+    "hidden": false,
+    "type": "origins:modify_swim_speed",
+    "modifier": {
+        "operation": "addition",
+        "value": -0.008
+    },
+    "name": "§c§l§nSwimming Slowness",
+    "description": "You move slower through water than a human, but are still faster than any of the fae."
+}

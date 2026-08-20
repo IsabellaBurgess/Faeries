@@ -1,0 +1,10 @@
+{
+    "powers": [
+        "custom_skins:ent_wheel"
+    ],
+    "icon": "minecraft:oak_leaves",
+    "order": 1,
+    "impact": 1,
+    "name": "Human",
+    "description": "A regular human who has managed to find themselves trapped in the Fae realm. I wish you the best of luck. You'll need it."
+}

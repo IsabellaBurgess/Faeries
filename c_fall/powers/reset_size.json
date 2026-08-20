@@ -1,0 +1,12 @@
+{
+    "name": "§a§l§nReset Size",
+    "description": "Your size will reset when your emotions calm down",
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.septenary_active"
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "scale reset"
+    }
+}

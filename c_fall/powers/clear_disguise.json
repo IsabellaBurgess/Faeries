@@ -1,0 +1,26 @@
+{
+    "name": "§a§l§nUndo Glamour",
+    "description": "You are able to drop your glamour and return to your original form",
+    "type": "origins:active_self",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Return to your original form with %s"
+        }
+    ],
+    "key": {
+        "key": "key.origins.secondary_active"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "power grant @s c_fall:disguise_particles"
+            },
+            {
+                "type": "sync:remove_disguise"
+            }
+        ]
+    }
+}

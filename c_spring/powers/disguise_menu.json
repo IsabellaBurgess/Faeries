@@ -1,0 +1,341 @@
+{
+    "name": "§a§l§nGlamour",
+    "description": "A life in the human realm has made you very profficient at using glamour. You are able to disguise yourself as any human that you have met.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/active.png",
+            "text": "Open the menu with %s"
+        }
+    ],
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+    "entity_action": {
+        "type": "sync:radial_menu",
+        "entries": [
+            {
+                "icon": "players:textures/gui/rin_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "rindomness"
+                        }
+                    ]
+                },
+                "tooltip": "Rin",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/human_button.png",
+                "highlight_button_texture": "players:textures/gui/human_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/rk_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "RunawayKid_"
+                        }
+                    ]
+                },
+                "tooltip": "RK",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/human_button.png",
+                "highlight_button_texture": "players:textures/gui/human_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/rozu_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "Rozu_Gold"
+                        }
+                    ]
+                },
+                "tooltip": "Rozu",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/human_button.png",
+                "highlight_button_texture": "players:textures/gui/human_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/ent_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "entguarde"
+                        }
+                    ]
+                },
+                "tooltip": "Ent",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/human_button.png",
+                "highlight_button_texture": "players:textures/gui/human_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/nyx_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "Nyx_Acara"
+                        }
+                    ]
+                },
+                "tooltip": "Nyx",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/unseelie_button.png",
+                "highlight_button_texture": "players:textures/gui/unseelie_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/sierra_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "ethersierra"
+                        }
+                    ]
+                },
+                "tooltip": "Sierra",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/unseelie_button.png",
+                "highlight_button_texture": "players:textures/gui/unseelie_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/wren_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "Wren_InTheWoods"
+                        }
+                    ]
+                },
+                "tooltip": "Wren",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/unseelie_button.png",
+                "highlight_button_texture": "players:textures/gui/unseelie_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/cloud_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "Cloudy_Cryptid"
+                        }
+                    ]
+                },
+                "tooltip": "Cloud",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/unseelie_button.png",
+                "highlight_button_texture": "players:textures/gui/unseelie_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/jam_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "jampreserves"
+                        }
+                    ]
+                },
+                "tooltip": "Jam",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/unseelie_button.png",
+                "highlight_button_texture": "players:textures/gui/unseelie_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/haz_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "HazardousBio"
+                        }
+                    ]
+                },
+                "tooltip": "Haz",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/seelie_button.png",
+                "highlight_button_texture": "players:textures/gui/seelie_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/lex_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "lexbiini"
+                        }
+                    ]
+                },
+                "tooltip": "Lex",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/seelie_button.png",
+                "highlight_button_texture": "players:textures/gui/seelie_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/mel_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "MelFoxie"
+                        }
+                    ]
+                },
+                "tooltip": "Mel",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/seelie_button.png",
+                "highlight_button_texture": "players:textures/gui/seelie_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/val_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "yourpalval2004"
+                        }
+                    ]
+                },
+                "tooltip": "Val",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/seelie_button.png",
+                "highlight_button_texture": "players:textures/gui/seelie_button_selected.png"
+            },
+            {
+                "icon": "players:textures/gui/wyatt_icon.png",
+                "entity_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:execute_command",
+                            "command": "power grant @s c_spring:disguise_particles"
+                        },
+                        {
+                            "type": "sync:disguise_as_player",
+                            "player_name": "MementoMorian"
+                        }
+                    ]
+                },
+                "tooltip": "Wyatt",
+                "button_width": 22,
+                "button_height": 24,
+                "icon_width": 20,
+                "icon_height": 20,
+                "button_texture": "players:textures/gui/human_button.png",
+                "highlight_button_texture": "players:textures/gui/human_button_selected.png"
+            }
+        ]
+    }
+}

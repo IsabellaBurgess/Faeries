@@ -1,0 +1,91 @@
+{
+    "name": "Switch Skins",
+    "description": "Switch between your different skins with the click of a button",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/active.png",
+            "text": "Open the menu with %s"
+        }
+    ],
+    "type": "origins:multiple",
+    "wheel": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.primary_active"
+        },
+        "entity_action": {
+            "type": "sync:radial_menu",
+            "entries": [
+                {
+                    "icon": "players:textures/gui/ofe_nose_bleed_icon.png",
+                    "entity_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "power remove @s custom_skins:ent_skins_scarf"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "power grant @s custom_skins:ent_skins_nosebleed"
+                            }
+                        ]
+                    },
+                    "tooltip": "Nosebleed",
+                    "button_width": 22,
+                    "button_height": 24,
+                    "icon_width": 20,
+                    "icon_height": 20,
+                    "button_texture": "players:textures/gui/human_button.png",
+                    "highlight_button_texture": "players:textures/gui/human_button_selected.png"
+                },
+                {
+                    "icon": "players:textures/gui/ofe_scarf_up_icon.png",
+                    "entity_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "power remove @s custom_skins:ent_skins_nosebleed"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "power grant @s custom_skins:ent_skins_scarf"
+                            }
+                        ]
+                    },
+                    "tooltip": "Scarf up",
+                    "button_width": 22,
+                    "button_height": 24,
+                    "icon_width": 20,
+                    "icon_height": 20,
+                    "button_texture": "players:textures/gui/human_button.png",
+                    "highlight_button_texture": "players:textures/gui/human_button_selected.png"
+                },
+                {
+                    "icon": "players:textures/gui/ent_icon.png",
+                    "entity_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:execute_command",
+                                "command": "power revoke @s custom_skins:ent_skins_nosebleed"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "power revoke @s custom_skins:ent_skins_scarf"
+                            }
+                        ]
+                    },
+                    "tooltip": "Default",
+                    "button_width": 22,
+                    "button_height": 24,
+                    "icon_width": 20,
+                    "icon_height": 20,
+                    "button_texture": "players:textures/gui/human_button.png",
+                    "highlight_button_texture": "players:textures/gui/human_button_selected.png"
+                }
+            ]
+        }
+    }
+}

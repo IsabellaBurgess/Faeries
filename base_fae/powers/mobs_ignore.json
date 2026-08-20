@@ -1,0 +1,6 @@
+{
+    "name": "§a§l§nUneasy Truce",
+    "description": "The creatures of the night are able to sense the magic within you, and have decided to steer clear. However, that does not mean they won't fight back if they feel threatened.",
+    "type": "sync:mobs_ignore",
+    "provokable": true
+}

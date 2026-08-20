@@ -1,0 +1,12 @@
+{
+    "powers": [
+        "corruption:eat_xp_stage_1",
+        "base_fae:mobs_ignore",
+        "base_fae:night_vision"
+    ],
+    "icon": "minecraft:chorus_fruit",
+    "order": 2,
+    "impact": 3,
+    "name": "???",
+    "description": "You think you might be starting to understand what Percival was telling you."
+}

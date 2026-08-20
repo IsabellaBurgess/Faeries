@@ -1,0 +1,25 @@
+{
+    "powers": [
+        "custom_skins:sierra_wheel",
+        "custom_skins:sierra_remove_skin",
+        "unseelie:shadow_teleport",
+        "unseelie:trigger_storm",
+        "base_fae:night_vision",
+        "unseelie:ice_thorn",
+        "unseelie:player_freeze",
+        "base_fae:mobs_ignore",
+        "base_fae:drop_iron",
+        "unseelie:in_seelie_territory",
+        "base_fae:drop_iron",
+        "base_fae:salt_repel",
+        "base_fae:rowan_nausea",
+        "base_fae:iron_damage",
+        "base_fae:no_boat",
+        "base_fae:swim_slow"
+    ],
+    "icon": "minecraft:wither_rose",
+    "order": 3,
+    "impact": 3,
+    "name": "Unseelie",
+    "description": "A fae of the Unseelie Courts, sent here after the Seelie prince was killed. The Seelie suspect you had something to do with it."
+}

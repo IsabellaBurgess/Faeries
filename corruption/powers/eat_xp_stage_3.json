@@ -1,0 +1,80 @@
+{
+    "name": "§1§l§nHunger",
+    "description": "The idea of eating food makes you sick. You can no longer force yourself to do it. That's ok, you have other ways ",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Restore hunger by pressing %s. Doing so will cost experience."
+        }
+    ],
+    "type": "origins:multiple",
+    "no_cake": {
+        "type": "origins:prevent_block_use",
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:block",
+                    "block": "minecraft:cake"
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "minecraft:candle_cakes"
+                }
+            ]
+        }
+    },
+    "no_food": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food"
+                },
+                {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "item": "minecraft:chorus_fruit"
+                    },
+                    "inverted": true
+                }
+            ]
+        }
+    },
+    "consume_use": {
+        "type": "origins:active_self",
+        "key": {
+            "key": "key.origins.quaternary_active"
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:xp_levels",
+                    "comparison": ">=",
+                    "compare_to": 3
+                },
+                {
+                    "type": "origins:food_level",
+                    "comparison": "<",
+                    "compare_to": 20
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:feed",
+                    "food": 5,
+                    "saturation": 5
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "xp add @s -9 points"
+                }
+            ]
+        }
+    }
+}

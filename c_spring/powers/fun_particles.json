@@ -1,0 +1,18 @@
+{
+    "name": "§a§l§nFun sparkles!",
+    "description": "You are able to focus your magic into a visible form.",
+    "type": "origins:active_self",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Create a swirl of magic with %s"
+        }
+    ],
+    "key": {
+        "key": "key.origins.quaternary_active"
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "particle cherry_leaves ~ ~1 ~ 1 0.8 1 0.5 60"
+    }
+}

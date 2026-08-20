@@ -1,0 +1,42 @@
+{
+    "name": "§1§l§nHeal yourself of the corruption",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Heal the corruption by hitting %s. THIS IS NON REVERSABLE"
+        }
+    ],
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 0.98 0.8 0.33 1 ~ ~1 ~ 0.3 0.6 0.3 0.4 200 normal"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 0.98 0.8 0.33 1 ~ ~1 ~ 0.3 0.6 0.3 0.4 200 normal"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item replace entity @s armor.head with minecraft:air"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power remove @s custom_skins:val_stage_3"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power grant @s custom_skins:val_heal"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "origin set @s origins:origin seelie:seelie"
+            }
+        ]
+    },
+    "key": {
+        "key": "key.origins.quinary_active"
+    }
+}

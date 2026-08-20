@@ -1,0 +1,49 @@
+{
+    "type": "origins:multiple",
+    "phasing": {
+        "type": "origins:phasing",
+        "render_type": "blindness",
+        "phase_down_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:sneaking"
+                },
+                {
+                    "type": "origins:on_block"
+                }
+            ]
+        },
+        "block_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_tag",
+                    "tag": "seelie:phaseable"
+                },
+                {
+                    "type": "origins:and",
+                    "conditions": [
+                        {
+                            "type": "origins:in_tag",
+                            "tag": "minecraft:campfires"
+                        },
+                        {
+                            "type": "origins:block_state",
+                            "property": "lit",
+                            "value": false
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "popup": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "title @s actionbar {\"text\": \"You can now phase through blocks\", \"color\": \"green\"}"
+        }
+    }
+}

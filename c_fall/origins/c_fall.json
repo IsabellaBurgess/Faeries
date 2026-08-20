@@ -1,0 +1,24 @@
+{
+    "powers": [
+        "c_fall:grow",
+        "c_fall:shrink",
+        "c_fall:reset_size",
+        "c_fall:disguise_menu",
+        "c_fall:clear_disguise",
+        "changeling_base:night_vision_timer",
+        "c_fall:fun_particles",
+        "changeling_base:unarmed_strike_c",
+        "base_fae:mobs_ignore",
+        "changeling_base:iron_reaction",
+        "changeling_base:salt_repel",
+        "changeling_base:rowan_nausea",
+        "changeling_base:swim_slowdown",
+        "changeling_base:clear_nightvision",
+        "c_fall:check_not_glowing"
+    ],
+    "icon": "minecraft:leaf_litter",
+    "order": 10,
+    "impact": 2,
+    "name": "Changeling",
+    "description": "A perfectly normal human with... a few quirks."
+}

@@ -1,0 +1,13 @@
+{
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "condition": {
+        "type": "origins:glowing",
+        "inverted": true
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "power grant @s c_fall:remove_glamor_particles"
+    }
+}

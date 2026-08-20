@@ -1,0 +1,21 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 0.83 0.62 1 1 ~ ~1 ~ 0.3 0.6 0.3 0.4 250 normal"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 1 0.62 0.97 1 ~ ~1 ~ 0.3 0.6 0.3 0.4 250 normal"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power remove @s c_spring:disguise_particles"
+            }
+        ]
+    }
+}

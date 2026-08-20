@@ -1,0 +1,28 @@
+{
+    "powers": [
+        "corruption:trigger_heal",
+        "corruption:place_catalyst",
+        "corruption:tether",
+        "corruption:get_xp",
+        "corruption:health_boost_stage_3",
+        "corruption:eat_xp_stage_2",
+        "corruption:teleport_3",
+        "corruption:permanent_night_vision",
+        "base_fae:prevent_pickup",
+        "seelie:unarmed_strike_s",
+        "seelie:toggle_phasing",
+        "corruption:vine_whip",
+        "base_fae:mobs_ignore",
+        "base_fae:drop_iron",
+        "base_fae:salt_repel",
+        "base_fae:rowan_nausea",
+        "base_fae:iron_damage",
+        "corruption:moss_silktouch",
+        "corruption:no_poison"
+    ],
+    "icon": "minecraft:chorus_fruit",
+    "order": 2,
+    "impact": 3,
+    "name": "The Forest",
+    "description": "You have become part of the forest. You are happy here."
+}

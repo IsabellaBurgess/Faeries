@@ -1,0 +1,82 @@
+{
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_ingot\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_helmet\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_chestplate\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_leggings\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_boots\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_sword\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_shovel\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_pickaxe\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_axe\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_hoe\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:raw_iron\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_block\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_bars\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_horse_armor\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_nugget\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_door\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:iron_trapdoor\"}}] run data merge entity @s {PickupDelay:40s}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "execute as @e[distance=..2,type=item,nbt={Item:{id:\"minecraft:raw_iron_block\"}}] run data merge entity @s {PickupDelay:40s}"
+            }
+        ]
+    }
+}

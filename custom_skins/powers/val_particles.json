@@ -1,0 +1,17 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 0.98 0.8 0.33 1 ~ ~1 ~ 0.3 0.6 0.3 0.4 200 normal"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 0.98 0.8 0.33 1 ~ ~1 ~ 0.3 0.6 0.3 0.4 200 normal"
+            }
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "hidden": false,
+    "type": "origins:action_over_time",
+    "interval": 1,
+    "entity_action": {
+        "type": "origins:drop_inventory",
+        "throw_randomly": true,
+        "retain_ownership": false,
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "base_fae:iron_items"
+            }
+        }
+    },
+    "name": "§c§l§nBurning Iron",
+    "description": "Iron burns your skin, causing you to drop it instantly. You will also take increased damage from iron weapons or tools."
+}

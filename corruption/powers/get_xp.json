@@ -1,0 +1,8 @@
+{
+    "type": "origins:action_over_time",
+    "interval": 6,
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "execute as @s if block ~ ~-1 ~ sculk run xp add @s 1 points"
+    }
+}

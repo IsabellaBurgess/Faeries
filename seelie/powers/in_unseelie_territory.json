@@ -1,0 +1,29 @@
+{
+    "name": "§c§l§nEnemy Territory",
+    "description": "You are unused to spending time in cold environments, and the cold saps your strength. You will gain weakness when in Unseelie Territory.",
+    "type": "origins:stacking_status_effect",
+    "min_stacks": 0,
+    "max_stacks": 1,
+    "duration_per_stack": 10,
+    "tick_rate": 1,
+    "effect": {
+        "effect": "minecraft:weakness",
+        "is_ambient": true,
+        "show_particles": false,
+        "show_icon": true,
+        "amplifier": 0
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:biome",
+                "biome": "minecraft:snowy_taiga"
+            },
+            {
+                "type": "origins:biome",
+                "biome": "minecraft:snowy_slopes"
+            }
+        ]
+    }
+}

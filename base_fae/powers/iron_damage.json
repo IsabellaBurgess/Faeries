@@ -1,0 +1,28 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "key0": {
+        "condition": {
+            "type": "origins:constant",
+            "value": false
+        },
+        "type": "origins:modify_damage_taken",
+        "bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:ingredient",
+                    "ingredient": {
+                        "tag": "base_fae:iron_items"
+                    }
+                }
+            }
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 6
+        }
+    }
+}

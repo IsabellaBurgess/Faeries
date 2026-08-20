@@ -1,0 +1,42 @@
+{
+    "name": "§1§l§nChorus Teleportation",
+    "description": "You have learned how to direct your teleportation",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Trigger by pressing %s. Costs 1 level of experience."
+        }
+    ],
+    "type": "origins:active_self",
+    "key": {
+        "key": "key.origins.ternary_active"
+    },
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 15,
+        "block": true,
+        "entity": false,
+        "shape_type": "collider",
+        "fluid_handling": "none",
+        "command_along_ray": "particle portal ~ ~ ~ 0.1 0.1 0.1 0 2",
+        "command_along_ray_only_on_hit": false,
+        "command_at_hit": "tp @s ~ ~ ~",
+        "hit_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle minecraft:reverse_portal ~ ~ ~ 0.3 0.3 0.5 5 100 force @a"
+                },
+                {
+                    "type": "origins:play_sound",
+                    "sound": "minecraft:entity.enderman.teleport"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "xp add @s -1 levels"
+                }
+            ]
+        }
+    }
+}

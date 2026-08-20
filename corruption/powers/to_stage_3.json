@@ -1,0 +1,51 @@
+{
+    "name": "§1§l§nProgress to Stage 3",
+    "description": "Allow the tree to take over completely. You don't have to fight it anymore.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Progress to stage 3 by hitting %s. THIS IS NON REVERSABLE"
+        }
+    ],
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 0.13 0.15 0.47 1 ~ ~1 ~ 0.3 0.6 0.3 0.2 300 normal"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 0.2 0.4 0.4 1 ~ ~1 ~ 0.3 0.6 0.3 0.2 200 normal"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "item replace entity @s armor.head with minecraft:carved_pumpkin{CustomModelData:4}"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "power grant @s custom_skins:val_stage_3"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "origin set @s origins:origin corruption:stage_3"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "title @a subtitle [{\"text\":\"Something has changed\",\"color\":\"#B06DAE\"}]"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "title @a title [{\"text\":\"A shiver runs down your spine\",\"color\":\"#B06DAE\"}]"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "playsound block.end_portal.spawn master @a ~ ~1 ~ 0.1"
+            }
+        ]
+    },
+    "key": {
+        "key": "key.origins.quinary_active"
+    }
+}

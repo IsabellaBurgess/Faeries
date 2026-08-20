@@ -1,0 +1,14 @@
+{
+    "type": "origins:replace_loot_table",
+    "replace": {
+        "minecraft:blocks/vine": "seelie:vine"
+    },
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "type": "origins:empty"
+        }
+    },
+    "hidden": true
+}

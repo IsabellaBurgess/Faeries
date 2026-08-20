@@ -1,0 +1,92 @@
+{
+    "hidden": false,
+    "name": "§c§l§nMagical Wards",
+    "description": "Salt burns your skin, causing imense pain. Best to avoid it at all costs.",
+    "type": "origins:multiple",
+    "key0": {
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 6,
+        "duration_per_stack": 20,
+        "tick_rate": 1,
+        "effects": [
+            {
+                "effect": "minecraft:wither",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true,
+                "amplifier": 4
+            },
+            {
+                "effect": "minecraft:slowness",
+                "is_ambient": true,
+                "show_particles": false,
+                "show_icon": true,
+                "amplifier": 5
+            }
+        ],
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:redstone_wire"
+                    }
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:offset",
+                        "condition": {
+                            "type": "origins:block",
+                            "block": "minecraft:redstone_wire"
+                        },
+                        "y": -1
+                    }
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:offset",
+                        "condition": {
+                            "type": "origins:block",
+                            "block": "minecraft:redstone_wire"
+                        },
+                        "y": -2
+                    }
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:offset",
+                        "condition": {
+                            "type": "origins:block",
+                            "block": "minecraft:redstone_wire"
+                        },
+                        "y": -3
+                    }
+                }
+            ]
+        }
+    },
+    "key1": {
+        "type": "origins:prevent_block_selection",
+        "block_condition": {
+            "type": "origins:block",
+            "block": "minecraft:redstone_wire"
+        }
+    },
+    "key2": {
+        "type": "origins:prevent_block_selection",
+        "block_condition": {
+            "type": "origins:offset",
+            "condition": {
+                "type": "origins:block",
+                "block": "minecraft:redstone_wire"
+            },
+            "y": 1
+        }
+    }
+}

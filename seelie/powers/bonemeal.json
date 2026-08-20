@@ -1,0 +1,43 @@
+{
+    "type": "origins:action_on_block_use",
+    "block_action": {
+        "type": "origins:bonemeal"
+    },
+    "entity_action": {
+        "type": "origins:exhaust",
+        "amount": 4
+    },
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:equipped_item",
+                "equipment_slot": "mainhand",
+                "item_condition": {
+                    "type": "origins:empty"
+                }
+            },
+            {
+                "type": "origins:sneaking"
+            },
+            {
+                "type": "origins:food_level",
+                "comparison": ">",
+                "compare_to": 2
+            }
+        ]
+    },
+    "name": "§a§l§nNature's Touch",
+    "description": "You can nurture the plants around you, speeding up their growth. Be wary, however, as this drains your energy in return. Shift + right click a block to use.",
+    "badges": [
+        {
+            "sprite": "minecraft:textures/item/bone_meal.png",
+            "text": "Shift right-clicking on a block/plant with an empty hand will bonemeal it but exhaust you in the process."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "You cannot do this while at 1 hunger bar. You need to take care of yourself too."
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "type": "origins:multiple",
+    "nosebleed": {
+        "hidden": true,
+        "type": "sync:entity_texture_overlay",
+        "wide_texture_location": "players:textures/skins/ofe_nose_bleed.png",
+        "slim_texture_location": "players:textures/skins/ofe_nose_bleed.png",
+        "render_as_overlay": false,
+        "hide_cape": true,
+        "show_first_person": true
+    },
+    "scarf": {
+        "hidden": true,
+        "type": "sync:entity_texture_overlay",
+        "wide_texture_location": "players:textures/skins/ofe_scarf_up.png",
+        "slim_texture_location": "players:textures/skins/ofe_scarf_up.png",
+        "render_as_overlay": false,
+        "hide_cape": true,
+        "show_first_person": true
+    }
+}

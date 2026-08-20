@@ -1,0 +1,23 @@
+{
+    "powers": [
+        "c_spring:disguise_menu",
+        "c_spring:clear_disguise",
+        "changeling_base:night_vision_timer",
+        "c_spring:fun_particles",
+        "changeling_base:unarmed_strike_c",
+        "base_fae:mobs_ignore",
+        "changeling_base:iron_reaction",
+        "changeling_base:salt_repel",
+        "changeling_base:rowan_nausea",
+        "changeling_base:swim_slowdown",
+        "changeling_base:clear_nightvision",
+        "c_spring:check_not_glowing",
+        "c_spring:fix_clear_disguise",
+        "c_spring:check_not_glowing"
+    ],
+    "icon": "minecraft:cherry_sapling",
+    "order": 10,
+    "impact": 2,
+    "name": "Changeling",
+    "description": "A faerie raised in the human realm who has only recently returned."
+}

@@ -1,11 +1,11 @@
 {
     "pack": {
-        "name": "Seelie Fae",
+        "name": "Fae Origins",
         "id": "seeliefae",
         "pack_format": 15,
         "authors": [
             "Isabella Burgess"
         ],
-        "description": "Seelie origin by Isabella"
+        "description": "Faeries origin by Isabella"
     }
 }

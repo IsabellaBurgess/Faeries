@@ -1,0 +1,27 @@
+{
+    "name": "§a§l§nSMOKE BOMB",
+    "description": "You know one spell. It is the coolest spell. It's awesome.",
+    "type": "origins:active_self",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Create a cloud of smoke with %s"
+        }
+    ],
+    "key": {
+        "key": "key.origins.ternary_active"
+    },
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 0.6 0.24 1 1 ~ ~1 ~ 0.5 0.6 0.5 0.4 300"
+            },
+            {
+                "type": "origins:execute_command",
+                "command": "particle dust 0.79 0.24 1 1 ~ ~1 ~ 0.5 0.6 0.5 0.4 300"
+            }
+        ]
+    }
+}

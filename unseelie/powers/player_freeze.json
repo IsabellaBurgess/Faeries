@@ -1,0 +1,88 @@
+{
+    "name": "§a§l§nFreeze",
+    "description": "Every 35 seconds, you are able to freeze a target in place, immobilizing them temporarily. The target is instantly freed if on fire.",
+    "badges": [
+        {
+            "sprite": "origins:textures/gui/badge/info.png",
+            "text": "Hit %s when facing an entity to freeze them in place and immobilize them."
+        },
+        {
+            "type": "origins:tooltip",
+            "sprite": "minecraft:textures/item/diamond_sword.png",
+            "text": "Combat ability."
+        }
+    ],
+    "type": "origins:active_self",
+    "cooldown": 700,
+    "key": {
+        "key": "key.origins.secondary_active"
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 12
+    },
+    "condition": {
+        "type": "origins:raycast",
+        "distance": 64,
+        "block": false,
+        "match_bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:living"
+            }
+        },
+        "hit_bientity_condition": {
+            "type": "origins:actor_condition",
+            "condition": {
+                "type": "origins:on_block"
+            }
+        }
+    },
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 64,
+        "block": false,
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:living"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:on_fire"
+                    }
+                ]
+            }
+        },
+        "bientity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:target_action",
+                    "action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:play_sound",
+                                "sound": "block.glass.break",
+                                "volume": 2
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "tp @s ~ ~ ~"
+                            },
+                            {
+                                "type": "origins:execute_command",
+                                "command": "power grant @s unseelie:frozen"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

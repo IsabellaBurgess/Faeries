@@ -1,0 +1,64 @@
+{
+    "name": "§a§l§nShadow Teleport",
+    "description": "You are able to meld with the shadows and teleport through them once every 10 seconds. Activate with primary",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:raycast",
+        "distance": 64,
+        "block": true,
+        "entity": false,
+        "shape_type": "collider",
+        "fluid_handling": "none",
+        "command_along_ray": "particle dust 0 0 0 1 ~ ~ ~ 0 0 0 0 1",
+        "command_along_ray_only_on_hit": false,
+        "command_at_hit": "tp @s ~ ~ ~",
+        "hit_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 0.2 0.2 0.2 1 ~ ~1 ~ 0.3 0.6 0.3 0.4 400"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "particle dust 0 0 0 1 ~ ~1 ~ 0.3 0.6 0.3 0.4 100"
+                }
+            ]
+        }
+    },
+    "key": {
+        "key": "key.origins.primary_active"
+    },
+    "cooldown": 200,
+    "hud_render": {
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 15
+    },
+    "condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:in_rain"
+            },
+
+            {
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:exposed_to_sun",
+                        "inverted": true
+                    },
+                    {
+                        "type": "origins:in_block",
+                        "block_condition": {
+                            "type": "origins:light_level",
+                            "light_type": "block",
+                            "comparison": "<",
+                            "compare_to": 5
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

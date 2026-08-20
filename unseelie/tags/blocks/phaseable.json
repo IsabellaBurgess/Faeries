@@ -1,0 +1,27 @@
+{
+    "values": [
+        "#minecraft:leaves",
+        "#minecraft:logs_that_burn",
+        "minecraft:dried_kelp_block",
+        "minecraft:moss_carpet",
+        "minecraft:azalea",
+        "minecraft:flowering_azalea",
+        "minecraft:bamboo",
+        "minecraft:bee_nest",
+        "minecraft:beetroots",
+        "minecraft:big_dripleaf",
+        "minecraft:brown_mushroom_block",
+        "minecraft:carved_pumpkin",
+        "minecraft:cave_vines_plant",
+        "minecraft:cave_vines",
+        "minecraft:cocoa",
+        "minecraft:jack_o_lantern",
+        "minecraft:lily_pad",
+        "minecraft:melon",
+        "minecraft:mushroom_stem",
+        "minecraft:pumpkin",
+        "minecraft:red_mushroom_block",
+        "minecraft:cactus",
+        "minecraft:mangrove_roots"
+    ]
+}
